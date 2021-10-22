@@ -6,6 +6,7 @@ import style from './FormAddContact.module.css';
 export default function FormAddContact({ onSubmit }) {
   const loginInputId = shortid.generate();
   const numberInputId = shortid.generate();
+  const contactInputId = shortid.generate();
 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -29,7 +30,7 @@ export default function FormAddContact({ onSubmit }) {
     event.preventDefault();
 
     const contact = {
-      id: shortid.generate(),
+      id: contactInputId,
       name: name,
       number: number,
     };
